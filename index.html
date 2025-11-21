@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Splicerr</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="logo">SPLICERR</div>
+            <input type="text" class="search" placeholder="Search sounds...">
+        </header>
+
+        <div class="tabs-header">
+            <button class="tab-header active" data-tab="library">Library</button>
+            <button class="tab-header" data-tab="upload">Upload</button>
+        </div>
+
+        <!-- Библиотека звуков -->
+        <main class="sound-list tab-content active" id="library-tab">
+            <div class="sound-item">
+                <div class="sound-cover"></div>
+                <div class="sound-info">
+                    <div class="sound-name">KICK_808_BOOM.wav</div>
+                    <div class="sound-tags">drums • kick • 808</div>
+                </div>
+                <div class="sound-wave"></div>
+                <div class="sound-duration">0:04</div>
+                <button class="play-btn">▶</button>
+            </div>
+        </main>
+
+        <!-- Загрузка файлов -->
+        <div class="upload-tab tab-content" id="upload-tab">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <div class="upload-text">Нажми чтобы загрузить WAV файл</div>
+                <div class="upload-subtext">Работает через Telegram</div>
+                <input type="file" id="fileInput" accept=".wav,audio/*" style="display: none;">
+            </div>
+
+            <div class="upload-info">
+                <p>✅ Файлы сохраняются локально в браузере</p>
+                <p>✅ Можно воспроизводить загруженные треки</p>
+                <p>✅ Работает в Telegram Web App</p>
+            </div>
+
+            <div class="uploaded-files" id="uploadedFiles">
+                <!-- Загруженные файлы появятся здесь -->
+            </div>
+        </div>
+
+        <div class="player">
+            <div class="now-playing">
+                <div class="current-track">No track selected</div>
+                <div class="player-controls">
+                    <button class="control-btn play-pause">▶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
