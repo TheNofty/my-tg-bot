@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding-bottom: 80px;
+}
+
+.header {
+    background: #151515;
+    padding: 15px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.search {
+    width: 100%;
+    padding: 10px 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Вкладки */
+.tabs-header {
+    display: flex;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.tab-header {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #666;
+    padding: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tab-header.active {
+    color: white;
+    border-bottom: 2px solid #4ea4f5;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Список звуков */
+.sound-list {
+    padding: 15px;
+}
+
+.sound-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #181818;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #252525;
+}
+
+.sound-cover {
+    width: 40px;
+    height: 40px;
+    background: #252525;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.sound-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.sound-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sound-tags {
+    font-size: 11px;
+    color: #888888;
+}
+
+.sound-wave {
+    width: 120px;
+    height: 30px;
+    background: #252525;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.sound-duration {
+    font-size: 12px;
+    color: #888888;
+    width: 35px;
+    text-align: center;
+}
+
+.play-btn {
+    width: 32px;
+    height: 32px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Зона загрузки */
+.upload-tab {
+    padding: 20px;
+}
+
+.upload-area {
+    border: 2px dashed #4ea4f5;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(78, 164, 245, 0.1);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.upload-area:active {
+    background: rgba(78, 164, 245, 0.2);
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.upload-text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.upload-subtext {
+    font-size: 12px;
+    color: #888;
+}
+
+.upload-info {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.upload-info p {
+    margin: 5px 0;
+}
+
+.uploaded-file {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #181818;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #252525;
+}
+
+.uploaded-file-info {
+    flex: 1;
+}
+
+.uploaded-file-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.uploaded-file-size {
+    font-size: 11px;
+    color: #888;
+}
+
+.delete-btn {
+    background: #ff4444;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Плеер */
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #151515;
+    border-top: 1px solid #2a2a2a;
+    padding: 12px 15px;
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current-track {
+    font-size: 14px;
+    color: #888888;
+}
+
+.player-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    background: #2a2a2a;
+    border: none;
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.play-pause {
+    background: #4ea4f5;
+}
